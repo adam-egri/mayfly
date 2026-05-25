@@ -1,0 +1,63 @@
+<!-- nix-shell -p python3Minimal -->
+<!-- python3 -m http.server -->
+
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <script>
+    fetch("data/date.txt")
+    .then(response => response.text())
+    .then(text => {
+	// find line starting with "month:"
+	const match_month = text.match(/^month:\s*(\w+)/mi);	
+	if (match_month) {
+	    const month = match_month[1];
+	    document.getElementById("month").textContent = month;
+	}
+	const match_day = text.match(/^day:\s*(\w+)/mi);	
+	if (match_day) {
+	    const day = match_day[1];
+	    document.getElementById("day").textContent = day;
+	}
+    });
+  </script>
+  
+  <body>
+
+    <ul>
+      <li><a class="active" href="index.html">Kezdőlap</a></li>
+      <li><a href="dunaviragrol.html">A dunavirágról</a></li>
+      <li><a href="modell.html">Modell</a></li>
+      <li><a href="irodalom.html">Irodalom</a></li>
+      <li><a href="kapcsolat.html">Kapcsolat</a></li>
+      <li><a href="https://dome.ecolres.hu"><img src="images/DOME-Color_White_Background@4x_cropped.png" style="height:19px;"></a></li>
+      <li><a href="https://ecolres.hu"><img src="images/OK-logo.png" style="height:19px;"></a></li>
+    </ul>
+
+    <!-- <div id="menu"></div> -->
+
+    <!-- <div style = "background-color: rgba(63, 63, 63, 0.8); padding: 25px; border: 0px solid white; margin: 25px; position: absolute; top: 75px; left: 50px; font-family: Calibri, Trebuchet MS, sans-serif; font-size: 44px; font-weight: normal; color: #f0f0f0"> -->
+    <!--   <p>Becsült rajzási csúcs</p> -->
+    <!-- </div> -->
+
+    <div class="maintext">Becsült rajzási csúcs</div>
+    
+    <div class="year">2026</div>
+    <div class="month" id="month">Aug</div>
+    <div class="day" id="day">12</div>
+    
+    <div class="bottomright">Fotó: Potyó Imre</div>
+    <div class="bottomleft">Frissítve: 2026.01.12. 12:00</div>
+
+    <!-- <script> -->
+      <!--   fetch("menu.html") -->
+      <!-- .then(response => response.text()) -->
+      <!-- .then(data => document.getElementById("menu").innerHTML = data); -->
+      <!-- </script> -->
+
+  </body>
+</html>

@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #222222;
+}
+
+h2, p {
+    margin: 10px;
+    color: #f0f0f0;
+    font-size: 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #222222;
+
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
+    
+    font-family: Calibri, "Trebuchet MS", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #f0f0f0;
+}
+
+ul li {
+    float: left;
+}
+
+ul li a.active {
+  background-color: #333333;
+}
+
+ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    background-color: #111191;
+}
+
+.bottomleft {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    font-size: 14px;
+    color: #f0f0f0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bottomright {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    font-size: 14px;
+    color: #f0f0f0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.maintext {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    font-family: Calibri, "Trebuchet MS", sans-serif;
+    font-size: 74px;
+    font-weight: 600;
+    color: #f0f0f0;
+}
+
+.year {
+    position: absolute;
+    top: 75px;
+    right: 50px;
+    font-family: Calibri, "Trebuchet MS", sans-serif;
+    font-size: 44px;
+    font-weight: 600;
+    color: #f0f0f0;
+}
+
+.month {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    font-family: Calibri, "Trebuchet MS", sans-serif;
+    font-size: 144px;
+    font-weight: 600;
+    color: #f0f0f0;
+}
+
+.day {
+    position: absolute;
+    top: 260px;
+    right: 50px;
+    font-family: Calibri, "Trebuchet MS", sans-serif;
+    font-size: 144px;
+    font-weight: 600;
+    color: #f0f0f0;
+}
+
+.reference {
+    margin-left: 50px;
+    font-family: Calibri, "Trebuchet MS", sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #f0f0f0;
+}
+
+/* a:link { */
+/*   color: green; */
+/*   background-color: transparent; */
+/*   text-decoration: none; */
+/* } */
+
+/* a:visited { */
+/*   color: darkgreen; */
+/*   background-color: transparent; */
+/*   text-decoration: none; */
+/* } */
+
+/* a:hover { */
+/*   color: red; */
+/*   background-color: transparent; */
+/*   text-decoration: underline; */
+/* } */
+
+/* a:active { */
+/*   color: yellow; */
+/*   background-color: transparent; */
+/*   text-decoration: underline; */
+/* } */

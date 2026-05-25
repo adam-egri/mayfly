@@ -1,0 +1,70 @@
+<!-- nix-shell -p python3Minimal -->
+<!-- python3 -m http.server -->
+
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <script>
+    fetch("data/date.txt")
+    .then(response => response.text())
+    .then(text => {
+	// find line starting with "month:"
+	const match_month = text.match(/^month:\s*(\w+)/mi);	
+	if (match_month) {
+	    const month = match_month[1];
+	    document.getElementById("month").textContent = month;
+	}
+	const match_day = text.match(/^day:\s*(\w+)/mi);	
+	if (match_day) {
+	    const day = match_day[1];
+	    document.getElementById("day").textContent = day;
+	}
+	const match_refreshdate = text.match(/\d{4}-\d{2}-\d{2} \d{2}:\d{2}/);
+	if (match_refreshdate) {
+	    const refreshdate = "Frissítve: "+match_refreshdate;
+	    document.getElementById("refreshdate").textContent = refreshdate;
+	}
+	const match_refreshyear = text.match(/\d{4}/);
+	if (match_refreshyear) {
+	    const refreshyear = match_refreshyear;
+	    document.getElementById("refreshyear").textContent = refreshyear;
+	}
+
+    });
+  </script>
+  
+  <body>
+
+    <ul>
+      <li><a class="active" href="index.html">Kezdőlap</a></li>
+      <li><a href="https://dome.ecolres.hu/species/dunavirag/">Dunavirág</a></li>
+      <li><a href="modell.html">Modell</a></li>
+      <li><a href="irodalom.html">Irodalom</a></li>
+      <li><a href="kapcsolat.html">Kapcsolat</a></li>
+      <li><a href="https://dome.ecolres.hu"><img src="images/DOME-Color_White_Background@4x_cropped.png" style="height:19px;"></a></li>
+      <li><a href="https://ecolres.hu"><img src="images/OK-logo.png" style="height:19px;"></a></li>
+    </ul>
+
+    <!-- <div id="menu"></div> -->
+
+    <div class="maintext">Becsült rajzási csúcs</div>
+    
+    <div class="year" id="refreshyear"></div>
+    <div class="month" id="month"></div>
+    <div class="day" id="day"></div>
+    
+    <div class="bottomright">Fotó: Potyó Imre</div>
+    <div class="bottomleft" id="refreshdate">Frissítve: 2026.01.12. 12:00</div>
+
+    <!-- <script> -->
+    <!--     fetch("menu.html") -->
+    <!--   .then(response => response.text()) -->
+    <!--   .then(data => document.getElementById("menu").innerHTML = data); -->
+    <!-- </script> -->
+
+  </body>
+</html>

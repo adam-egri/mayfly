@@ -1,0 +1,9 @@
+<ul>
+  <li><a class="active" href="index.html">Kezdőlap</a></li>
+  <li><a href="#news">A dunavirágról</a></li>
+  <li><a href="#contact">Modell</a></li>
+  <li><a href="irodalom.html">Irodalom</a></li>
+  <li><a href="#about">Kapcsolat</a></li>
+  <li><a href="https://dome.ecolres.hu"><img src="images/DOME-Color_White_Background@4x_cropped.png" style="height:19px;"></a></li>
+  <li><a href="https://ecolres.hu"><img src="images/OK-logo.png" style="height:19px;"></a></li>
+</ul>
