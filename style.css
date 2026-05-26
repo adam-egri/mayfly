@@ -8,13 +8,13 @@ body {
     
 }
 
-@media (max-width: 768px) {
-    body {
-        /* background-image: url("images/bg-mobile.jpg"); */
-        /* background-position: center; */
-	background-color: red;
-    }
-}
+/* @media (max-width: 768px) { */
+/*     body { */
+/*         /\* background-image: url("images/bg-mobile.jpg"); *\/ */
+/*         /\* background-position: center; *\/ */
+/* 	background-color: red; */
+/*     } */
+/* } */
 
 h2, p {
     margin: 10px;
