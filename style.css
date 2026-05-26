@@ -9,8 +9,9 @@ body {
 
 @media (max-width: 768px) {
     body {
-        background-image: url("images/bg-mobile.jpg");
-        background-position: center;
+        /* background-image: url("images/bg-mobile.jpg"); */
+        /* background-position: center; */
+	background-color: red;
     }
 }
 
