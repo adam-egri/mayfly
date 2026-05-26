@@ -26,6 +26,7 @@
 	const match_refreshdate = text.match(/\d{4}-\d{2}-\d{2} \d{2}:\d{2}/);
 	if (match_refreshdate) {
 	    const refreshdate = "Frissítve: "+match_refreshdate;
+	    console.log(refreshdate);
 	    document.getElementById("refreshdate").textContent = refreshdate;
 	}
 	const match_refreshyear = text.match(/\d{4}/);
